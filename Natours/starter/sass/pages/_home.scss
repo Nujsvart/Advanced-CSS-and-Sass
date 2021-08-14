@@ -65,20 +65,30 @@
 
 .section-book {
   padding: 15rem 5rem;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: linear-gradient(
     to right bottom,
     $color-primary-light,
     $color-primary-dark
   );
+
+  & > .row {
+    width: 120rem;
+    max-width: 100%;
+  }
 }
 
 .book {
   background-image: linear-gradient(
-    105deg,
-    rgba($color-white, 0.9) 0%,
-    rgba($color-white, 0.9) 50%,
-    transparent 50%
-  ), url(../img/nat-10.jpg);
+      105deg,
+      rgba($color-white, 0.9) 0%,
+      rgba($color-white, 0.9) 50%,
+      transparent 50%
+    ),
+    url(../img/nat-10.jpg);
   background-size: 100%;
   width: 100%;
   height: 50rem;
