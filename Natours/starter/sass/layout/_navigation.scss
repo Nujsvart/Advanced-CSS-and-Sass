@@ -18,6 +18,10 @@
     box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
     cursor: pointer;
 
+    @include respond(tab-port) {
+      top: 3rem;
+      right: 3rem;
+    }
   }
 
   &__background {
@@ -35,6 +39,11 @@
     transition: all 0.8s cubic-bezier(0.83, 0, 0.17, 1);
 
     //transform: scale(80);
+
+    @include respond(tab-port) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
 
   &__nav {
@@ -116,7 +125,6 @@
       height: 2px;
       background-color: $color-grey-dark-3;
       display: inline-block;
-
     }
 
     &::before,
@@ -124,15 +132,15 @@
       content: "";
       position: absolute;
       left: 0;
-      transition: all .2s;
+      transition: all 0.2s;
     }
 
     &::before {
-      top: -.8rem;
+      top: -0.8rem;
     }
 
     &::after {
-      top: .8rem;
+      top: 0.8rem;
     }
   }
 

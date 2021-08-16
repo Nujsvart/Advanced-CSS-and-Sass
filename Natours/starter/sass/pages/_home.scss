@@ -5,7 +5,23 @@
 
   .col-1-of-2 {
     width: 50%;
-  
+
+    @include respond(tab-land) {
+      width: 90%;
+      text-align: center;
+    }
+  }
+
+  & > .row {
+    @include respond(tab-land) {
+      @include flexCenter;
+      flex-direction: column;
+      padding-bottom: 15rem;
+    }
+
+    @include respond(phone) {
+      padding-bottom: initial;
+    }
   }
 }
 
@@ -22,9 +38,9 @@
   margin-top: -11rem;
 
   & > * {
-    display: flex;
-    justify-content: center;
+    @include flexCenter;
     flex-wrap: wrap;
+
     transform: skewY(7deg);
   }
 }
@@ -35,9 +51,7 @@
   margin-top: -10rem;
 
   & > .row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter;
     flex-wrap: wrap;
   }
 }
